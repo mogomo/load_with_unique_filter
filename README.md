@@ -24,7 +24,7 @@ Always review and test in a QA or non-production environment before using in a l
 1. A running Vertica environment.
 2. Create a sample CSV file at the following path:
 
-   /home/dbadmin/ALL/TMP/UNIQUE_LOAD/data.csv
+   /your_path/data.csv
 
 ## Sample contents of data.csv:
 
