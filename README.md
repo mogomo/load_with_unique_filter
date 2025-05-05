@@ -22,9 +22,7 @@ Always review and test in a QA or non-production environment before using in a l
 ## Prerequisites:
 
 1. A running Vertica environment.
-2. Create a sample CSV file at the following path:
-
-   /your_path/data.csv
+2. Create a sample CSV file at the following path:  /your_path/data.csv
 
 ## Sample contents of data.csv:
 
