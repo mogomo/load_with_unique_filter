@@ -28,12 +28,12 @@ Always review and test in a QA or non-production environment before using in a l
 
 ## Sample contents of data.csv:
 
-1,one,1.1
-2,two,2.1
-1,three,3.1
-3,four,4.1
-4,five,5.1
-2,six,6.1
+1,one,1.1  
+2,two,2.1  
+1,three,3.1  
+3,four,4.1  
+4,five,5.1  
+2,six,6.1  
 
 ------------------------------------------------------------------
 
