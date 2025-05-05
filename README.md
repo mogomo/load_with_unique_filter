@@ -1,11 +1,16 @@
 
 # Vertica Demo: Handling Duplicates with a UNIQUE Constraint
+
 The provided script demonstrates how to safely load data with duplicate keys into a Vertica table that enforces a UNIQUE constraint by using a staging table and filtering to retain only one occurrence per key.
+
 ------------------------------------------------------------------
+
 ## Disclaimer:
+
 This code is provided "as is" without any warranties or guarantees. 
 It is intended for educational and demonstration purposes only. 
 Always review and test in a QA or non-production environment before using in a live system.
+
 ------------------------------------------------------------------
 
 ## Files Included:
