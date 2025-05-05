@@ -25,13 +25,14 @@ Always review and test in a QA or non-production environment before using in a l
 2. Create a sample CSV file at the following path:  /your_path/data.csv
 
 ## Sample contents of data.csv:
-
+```
 1,one,1.1  
 2,two,2.1  
 1,three,3.1  
 3,four,4.1  
 4,five,5.1  
 2,six,6.1  
+```
 
 ------------------------------------------------------------------
 
@@ -53,13 +54,13 @@ Always review and test in a QA or non-production environment before using in a l
 ------------------------------------------------------------------
 
 ## Final Output Example (target table contents):
-
- f1 |  f2   | f3
-----+-------+-----
-  1 | three | 3.1
-  2 | six   | 6.1
-  3 | four  | 4.1
-  4 | five  | 5.1
-(4 rows)
-
+```
+ f1 |  f2   | f3  
+----+-------+-----  
+  1 | three | 3.1  
+  2 | six   | 6.1  
+  3 | four  | 4.1  
+  4 | five  | 5.1  
+(4 rows)  
+```
 ------------------------------------------------------------------
