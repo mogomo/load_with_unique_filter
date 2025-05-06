@@ -16,14 +16,14 @@ SEGMENTED BY hash(f1) ALL NODES;
 \echo
 \echo === Step 2: Previewing the data we want to load ===
 \echo The CSV file we want to load includes duplicate values in column f1:
-\! echo -e "1,new_one,1.1\n2,new_two,2.1\n1,new_three,3.1\n3,new_four,4.1\n4,new_five,5.1\n2,new_six,6.1" > /home/dbadmin/ALL/UNIQUE_LOAD/data.csv
-\! cat /home/dbadmin/ALL/UNIQUE_LOAD/data.csv
+\! echo -e "1,new_one,1.1\n2,new_two,2.1\n1,new_three,3.1\n3,new_four,4.1\n4,new_five,5.1\n2,new_six,6.1" > /your_path/data.csv
+\! cat /your_path/data.csv
 
 \echo
 \echo === Step 3: Attempting direct load into the target table ===
 \echo If we try to load the data directly into the table, the load will fail due to duplicate values:
 COPY my_fact_table
-FROM '/home/dbadmin/ALL/UNIQUE_LOAD/data.csv'
+FROM '/your_path/data.csv'
 DELIMITER ',';
 
 \echo
@@ -39,7 +39,7 @@ ON COMMIT PRESERVE ROWS KSAFE 0;
 \echo
 \echo Loading all rows (including duplicates) into the staging table:
 COPY staging_table_1
-FROM '/home/dbadmin/ALL/UNIQUE_LOAD/data.csv'
+FROM '/your_path/data.csv'
 DELIMITER ','
 ABORT ON ERROR;
 
