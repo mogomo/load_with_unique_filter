@@ -26,12 +26,12 @@ Always review and test in a QA or non-production environment before using in a l
 
 ## Sample contents of data.csv:
 ```
-1,one,1.1  
-2,two,2.1  
-1,three,3.1  
-3,four,4.1  
-4,five,5.1  
-2,six,6.1  
+1,new_one,1.1  
+2,new_two,2.1  
+1,new_three,3.1  
+3,new_four,4.1  
+4,new_five,5.1  
+2,new_six,6.1  
 ```
 
 ------------------------------------------------------------------
@@ -47,20 +47,22 @@ Always review and test in a QA or non-production environment before using in a l
 - Creates a schema and a target table with a UNIQUE constraint
 - Attempts to load duplicate data and fails (by design)
 - Loads the same data into a staging table with no constraints
-- Filters to keep only the first row per duplicate key using analytic SQL
+- Filters to keep only one row per duplicate key using analytic SQL
 - Optionally logs accepted vs. rejected rows
 - Inserts only the valid rows into the final table
 
 ------------------------------------------------------------------
 
-## Final Output Example (target table contents):
+## This is the final content of the first 6 lines in the target table after loading "new_" rows with unique "f1" values:
 ```
- f1 |  f2   | f3  
-----+-------+-----  
-  1 | three | 3.1  
-  2 | six   | 6.1  
-  3 | four  | 4.1  
-  4 | five  | 5.1  
-(4 rows)  
+ f1 |    f2    | f3  
+----+----------+-----  
+  1 | new_one  | 1.1  
+  2 | new_two  | 2.1  
+  3 | new_four | 4.1  
+  4 | old_4    | 4.1  
+  5 | old_5    | 5.1  
+  6 | old_6    | 6.1  
+(6 rows)  
 ```
 ------------------------------------------------------------------
